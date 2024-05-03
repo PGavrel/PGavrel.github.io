@@ -1,0 +1,293 @@
+#13293D black
+#004f73 darkblue
+#247BA0 blue
+#1B98E0 lightblue
+#E8F1F2 cream
+
+
+html{
+	margin: 0;
+	background-color: #000000;
+}
+
+ /* modifier la scrollbar */
+html { overflow-x: hidden; }
+::-webkit-scrollbar {
+	width: 15px;
+  }
+  
+  /* Fond de la scrollbar */
+  ::-webkit-scrollbar-track {
+	background: #f1f1f1; 
+  }
+   
+  /* poignée coulissante */
+  ::-webkit-scrollbar-thumb {
+	background: #888; 
+  }
+  
+  /* poignée coulissante hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555; 
+  }
+  /*Fin modifier la scrollbar */
+/* -------Début barre de navigation------- */
+header{
+	width: 100%;
+	background-color: #E8F1F2;
+	padding: 1% 1%;
+	font-size: 20px;
+	position: fixed;
+	margin: -0.6% -0.6% ;
+	color: #13293D;
+	display: flex;
+    justify-content: center;
+	z-index: 100;
+}
+header a {
+	color: black;
+	font-size: small;
+	margin-left: 10%;
+}
+header a:hover {
+	color: grey;
+}
+
+#home{
+	margin-right: 10%;
+	color: #247BA0;
+	font-family: Calibri, sans-serif;
+	font-weight: bold;
+}
+#home:hover{
+	color: #1a5d7a;
+	cursor: pointer;
+}
+
+nav{
+	display:inline-block;
+}
+
+header nav span {
+    margin-right: 30px; /* Espacement entre les mots */
+	font-size: large;
+}
+
+/* surligner au survol  */
+nav .nav-item:hover {
+	color: #004f73;
+	text-decoration: underline;
+	cursor: pointer;
+}
+/* Sousligner au survol de la section*/
+.nav-item.active {
+    text-decoration: underline; /* Soulignez l'élément actif */
+}
+
+/* Style du bouton principal */
+.dropbtn {
+    background-color: #dde5e6;
+    color:#13293D;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	margin-left: 20px;
+	display: flex;
+    align-items: center;
+	white-space: nowrap; /* Empêche le retour à la ligne */
+}
+
+
+/* Style du conteneur du menu déroulant */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style du contenu du menu déroulant (caché par défaut) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+/* Style des liens dans le menu déroulant */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Changement de couleur au survol des liens */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Affichage du menu déroulant lorsque survolé */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style des drapeaux */
+.langue-drapeau {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+/* -------Fin de la barre de navigation------- */
+
+
+/* Définition de la taille de l'écran */
+main {
+	display: flex;
+    flex-direction: column;
+    height: 800vh; /* Chaque page prendra 100% de la hauteur de l'écran. Changer pour avoir 100*nb pages*/
+	width: 100%;
+}
+a{
+	text-align: justify;
+}
+
+
+
+/* définition des class */
+.page{
+    flex: 1; /* Chaque pages prend la taille de l'écran */
+	display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.barre_sep {
+    width: 50%;
+    height: 2px; 
+    background-color: #13293D; 
+	margin-top: 3%;
+}
+
+
+
+
+
+
+/* --------Fin de définition des class--------------*/
+
+.titre_page {
+	color: #13293D ;
+	display: flex;
+    justify-content: center;
+}
+
+/*---------- Début de la page accueil------------- */
+#accueil{
+	background-image: linear-gradient(to bottom, #01283b ,#1f759a);
+}
+
+#accueil h1{
+	color: #e8f1f2;
+	margin-top: 10%;
+	font-size:400%;
+}
+.petite_barre_sep {
+    width: 25%;
+    height: 2px; 
+    background-color: #c5c5c5; 
+	margin: 2%;
+}
+
+
+#text_page_accueil{
+	color: #E8F1F2;
+	width: 63%;
+	text-align: justify;
+}
+#text_page_accueil a{
+	color: #E8F1F2;
+	text-decoration: underline #e8f1f25b;
+}
+#text_page_accueil a:hover{
+	color: #ffffff;
+	text-decoration: underline #ffffffab;
+}
+
+#accueil .nav-item{
+	color: #E8F1F2;
+	font-weight: bold;
+	font-size: xx-large;
+	margin-top: 10%;
+}
+
+#accueil .nav-item:hover{
+	color: #000000;
+	font-weight: bold;
+	font-size: xx-large;
+	margin-top: 10.5%;
+	cursor: pointer;
+}
+
+/*-------------- Fin de la page accueil -------------- */
+
+/* -------------- Début de la page prez -------------- */
+
+#conteneur_prez {
+    display: flex;
+	margin-top: 7%;
+}
+
+.pierrejpeg {
+	width: 560px;
+    height: 400px;
+	margin-left: 15%;
+	border-radius: 15px;
+	border:  solid 1px black;
+}
+
+
+#text_prez {
+	margin: 2% 15% 0 10%;
+	text-align: justify;
+}
+#text_prez a {
+	text-decoration: underline rgba(128, 128, 128, 0.555);
+	color: #000000;
+}
+
+#prez .nav-item{
+	color: #1f759a;
+	font-size: xx-large;
+	font-weight: bold;
+	margin-top: 4%;
+}
+
+#prez .nav-item:hover{
+	color: #000000;
+	font-size: xx-large;
+	font-weight: bold;
+	margin-top: 4.5%;
+	cursor: pointer;
+}
+/*--------------  Fin de la page prez -------------- */
+
+/*--------------  Début de la page comp -------------- */
+#conteneur_comp{
+	margin: 2% 10% 0 10%;
+=}
+/*--------------  Fin de la page comp -------------- */
+
+/*--------------  Fin de la page contact -------------- */
+
+footer{
+	background-color: #E8F1F2;
+	font-size: large;
+	width: 100%;
+	padding: 1% 1%;
+	font-size: 20px;
+	margin: -0.6% -0.6% ;
+	color: #13293D;
+	display: flex;
+    justify-content: center;
+}
