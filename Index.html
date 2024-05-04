@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pierre Gavrel - Portfolio</title>
+	<link rel="stylesheet" href="CSS/Style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+</head>
+<body>
+
+    <header>
+        <span id="home" class="nav-item" data-target="#accueil">Pierre Gavrel</span>
+        <nav>
+            <span class="nav-item" data-target="#prez"> À propos </span>
+            <span class="nav-item" data-target="#comp">Compétences</span>
+            <span class="nav-item" data-target="#edu_exp">Formations et expérience professionnelle</span>
+            <span class="nav-item" data-target="#projet">Projets</span>
+            <span class="nav-item" data-target="#loisir">Loisirs</span>
+            <span class="nav-item" data-target="#contact">Contacts</span>
+            
+        </nav>
+        <a href="C:/Users/gpier/OneDrive/Bureau/E-portfolio/Site réalisation/Mine/CV bouygue meudon MK23126 .pdf" download="CV_test"> 
+            <img src="Image/download.png" alt="Icone CV" style="width: 30px;">Mon CV  
+        </a>
+        <div class="dropdown">
+            
+            <button class="dropbtn"><a><img src="Image/world.png" alt="Illustration Langue" class="langue-drapeau" />Langues▽</a></button>
+            <div class="dropdown-content">
+                <ul id="liste_langue">
+                    <p><a href="index.html"><img id="fr_drap" src="Image/fr.png" alt="Drapeau Francais" class="langue-drapeau" /> Fr</a></p>
+                    <p><a href="index_en.html"><img id="en_drap" src="Image/gb.png" alt="English flag" class="langue-drapeau" /> En</a></p>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+
+        <div class="page" id="accueil">
+            <div class="barre_sep"></div>
+            <h1>Bienvenue sur mon Portfolio</h1>
+            <div class="petite_barre_sep"></div>
+            <h2 id="text_page_accueil">
+                Étudiant de 2e année en 
+                <a href="https://iutparis-seine.u-paris.fr/metiers-de-la-data/bachelor-universitaire-de-technologie-stid/#pll_switcher">
+                    BUT Science des données (Ex STID)</a>
+                à <a href="https://iutparis-seine.u-paris.fr/">L'IUT Paris Rives-de-Seine.</a>
+                Je suis aussi alternant chez <a href="https://www.corporate.bouyguestelecom.fr/nous-decouvrir/">
+                Bouygues Télécom</a>  en tant que data analyste.
+            </h2>
+            <span class="nav-item" id="down_accueil" data-target="#prez">▽</span>
+        </div>
+
+        <div class="page" id="prez">
+            <div class="barre_sep"></div>
+            <div id="conteneur_prez">
+                <div id="photo_prez"> <img src="Image/Pierre.jpg" alt="Photo de moi ;)" class="pierrejpeg"> </div>
+                <div id="text_prez">
+                    <p> Alternant de 2e année d'un <a href="https://iutparis-seine.u-paris.fr/metiers-de-la-data/bachelor-universitaire-de-technologie-stid/#pll_switcher">BUT Science des Données (ex STID)</a> à <a href="https://iutparis-seine.u-paris.fr/">l'IUT Paris Rives-de-seine</a>, j'ai toujours été attiré par les chiffres. Je suis curieux et j'aime apprendre de nouvelles choses. Étant aussi technophile, j'ai donc une appétence naturelle pour le secteur des données. </p>
+                    <p> J'ai choisi le parcours Visualisation et Conception d'Outils Décisionnels (VCOD) en deuxième année, car je suis plus attiré par l'automatisation, la gestion des données et la restitution sous forme de dataviz.</p>
+                    <p>En 2e année, je me suis orienté vers l'alternance. Je voulais découvrir le monde du travail ainsi qu'accumuler de l'expérience et des compétences professionnelles. Je réalise cette alternance chez <a href="https://www.corporate.bouyguestelecom.fr/nous-decouvrir/">Bouygues Télécom</a> en tant que data analyste. Je fais donc partie du service marketing pour un contrat de 2 ans. Je mets notamment en place des dataviz pour permettre aux chefs de produit de suivre les performances de leurs offres.</p>     
+                </div>
+                
+            </div> 
+            <span class="nav-item" data-target="#comp">▽</span>
+        </div>
+
+<!--Début Page compétence -->
+        <div class="page" id="comp">
+            <div class="barre_sep"></div>
+            <h1 class="titre_page">Compétences</h1>
+            <!-- début cartes compétences -->
+
+            <div class="row row-cols-1 row-cols-md-4 g-4" id="conteneur_comp">
+				<div class="col">
+					<div class="card h-80">
+						<img id="Dataviz" src="Image/Logo_dataviz.png" class="card-img-top" alt="Logo Tableau et Power BI">
+						<div class="card-body">
+							<h5 class="card-title">Data visualization</h5>
+							<p class="card-text">Tableau desktop/Serveur, Power BI </p>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card h-80">
+						<img id="Database" src="image/Logos_base_de_données.png" class="card-img-top" alt="Logo Microsoft access, Teradata, SQL">
+						<div class="card-body">
+							<h5 class="card-title">SGBD, requêtage</h5>
+							<p class="card-text">Teradata, MySQL, SQLite, Access</p>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card h-80">
+						<img src="image/Logos_prog_stat.png" class="card-img-top" alt="Logos SAS, R et Panda">
+						<div class="card-body">
+							<h5 class="card-title">Programmation statistique</h5>
+							<p class="card-text">R, SAS, Panda for python</p>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card h-80">
+						<img src="image/Logo_prog.png" class="card-img-top" alt="Logo python">
+						<div class="card-body">
+							<h5 class="card-title">Programmation</h5>
+							<p class="card-text">Python</p>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card h-80">
+						<img id="logo_prog_web" src="image/Logo_prog_web.png" class="card-img-top" alt="Logos HTML, CSS, JavaScript">
+						<div class="card-body">
+							<h5 class="card-title">Programmation web</h5>
+							<p class="card-text">HTML, CSS, JavaScript</p>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card h-80">
+						<img id="logo_editeur_code" src="image/Editeurs.png" class="card-img-top" alt="Éditeur de code">
+						<div class="card-body">
+							<h5 class="card-title">Éditeur de code</h5>
+							<p class="card-text"> Visual studio code, Spyder, Jupyter Notebook, Notepad++, Rstudio</p>
+						</div>
+					</div>
+				</div>
+                <div class="col">
+					<div class="card h-80">
+						<img id="Microsoft_365" src="Image/Microsoft_365.png" class="card-img-top" alt="Logo microsoft 365">
+						<div class="card-body">
+							<h5 class="card-title">Microsoft 365</h5>
+							<p class="card-text">Word, Excel, Powerpoint</p>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card h-80">
+						<img id="logo_langues" src="image/Langues.png" class="card-img-top" alt="Drapeau anglaise et français">
+						<div class="card-body">
+							<h5 class="card-title">Langues</h5>
+							<p class="card-text">Français, Anglais</p>
+						</div>
+					</div>
+				</div>
+			</div>
+              <!-- Fin cartes compétences -->
+        </div>
+<!--Fin Page compétence -->
+
+        <div class="page" id="edu_exp">
+            <div class="barre_sep"></div>
+            <h1 class="titre_page">Formations et expérience professionnelle</h1>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-content">
+                    <h3>Formation 1</h3>
+                    <p>Date de début - Date de fin</p>
+                    <p>Description de la formation...</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-content">
+                    <h3>Expérience professionnelle 1</h3>
+                    <p>Date de début - Date de fin</p>
+                    <p>Description de l'expérience...</p>
+                  </div>
+                </div>
+
+                <!-- Ajoutez d'autres éléments de timeline ici -->
+              </div>
+        </div>
+
+
+        <div class="page" id="projet">
+            <div class="barre_sep"></div>
+            <h1 class="titre_page">Projets</h1>
+        </div>
+        <div class="page" id="loisir">
+            <div class="barre_sep"></div>
+            <h1 class="titre_page">Loisirs</h1>
+        </div>
+
+        <div class="page" id="contact">
+            <div class="barre_sep"></div>
+            <h1 class="titre_page">Contacts</h1>
+
+            
+
+        </div>
+
+    </main>
+
+
+    <!--Début Footer -->
+    <footer>
+        <p>&copy; 2024 Pierre Gavrel - Portfolio</p>
+    </footer>
+    
+
+    <!--JavaScript -->
+    <script src="Javascript/Javascript.js"></script>
+    <!--Fin JavaScript -->
+</body>
+</html>

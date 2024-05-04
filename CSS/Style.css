@@ -96,6 +96,7 @@ nav .nav-item:hover {
 	display: flex;
     align-items: center;
 	white-space: nowrap; /* Empêche le retour à la ligne */
+	min-width: 100px;
 }
 
 
@@ -110,7 +111,7 @@ nav .nav-item:hover {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 130px;
     z-index: 1;
 }
 
@@ -137,7 +138,9 @@ nav .nav-item:hover {
     width: 15px;
     height: 15px;
     margin-right: 5px;
-}
+} 
+
+  
 /* -------Fin de la barre de navigation------- */
 
 
@@ -160,6 +163,9 @@ a{
 	display: flex;
     flex-direction: column;
     align-items: center; 
+}
+#comp{
+	flex: 2;
 }
 
 .barre_sep {
@@ -274,9 +280,44 @@ a{
 
 /*--------------  Début de la page comp -------------- */
 #conteneur_comp{
-	margin: 2% 10% 0 10%;
-=}
+	margin: 2% 8% 0 8%;
+}
+.card-img-top{
+	height: 200px;
+}
+.card-title{
+	height: 20px;
+}
+.card-text{
+	height: 30px;
+}
 /*--------------  Fin de la page comp -------------- */
+
+/*--------------  Début de la page Edu_exp -------------- */
+.timeline {
+	position: relative;
+	padding: 20px 0;
+  }
+  
+  .timeline-item {
+	display: flex;
+	margin-bottom: 40px;
+  }
+  
+  .timeline-content {
+	background-color: #f0f0f0;
+	padding: 20px;
+	border-radius: 5px;
+  }
+  
+  .timeline-content h3 {
+	margin-top: 0;
+  }
+  
+  .timeline-content p {
+	margin: 5px 0;
+  }
+/*--------------  Fin de la page Edu_exp -------------- */
 
 /*--------------  Fin de la page contact -------------- */
 
