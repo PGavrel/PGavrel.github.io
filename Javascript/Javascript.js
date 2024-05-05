@@ -1,3 +1,4 @@
+//-----Fonction navigation de la navbar
 document.addEventListener('DOMContentLoaded', function() {
     const navItems = document.querySelectorAll('.nav-item');
     navItems.forEach(item => {
@@ -14,6 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+//-----Fonction souligner les élément en cours d'affichage
 // Indication de surval
 document.addEventListener('DOMContentLoaded', function() {
     var sections = document.querySelectorAll('.page'); // Sélectionnez toutes les sections de la page
@@ -38,4 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', highlightNavItem);
     window.addEventListener('resize', highlightNavItem);
 });
+
+
+
 

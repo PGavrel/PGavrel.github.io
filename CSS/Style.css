@@ -279,6 +279,7 @@ a{
 /*--------------  Fin de la page prez -------------- */
 
 /*--------------  Début de la page comp -------------- */
+
 #conteneur_comp{
 	margin: 2% 8% 0 8%;
 }
@@ -293,31 +294,162 @@ a{
 }
 /*--------------  Fin de la page comp -------------- */
 
-/*--------------  Début de la page Edu_exp -------------- */
-.timeline {
+/*--------------  Début de la page parcours -------------- */
+.timeline{
+	margin-top: 100px;
+}
+.timeline{
 	position: relative;
-	padding: 20px 0;
-  }
-  
-  .timeline-item {
-	display: flex;
-	margin-bottom: 40px;
-  }
-  
-  .timeline-content {
-	background-color: #f0f0f0;
-	padding: 20px;
-	border-radius: 5px;
-  }
-  
-  .timeline-content h3 {
-	margin-top: 0;
-  }
-  
-  .timeline-content p {
-	margin: 5px 0;
-  }
-/*--------------  Fin de la page Edu_exp -------------- */
+	width: 90%;
+
+}
+.timeline .container {
+    padding: 10px 50px;
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+	opacity: 0;
+}
+
+
+
+@keyframes movedown{
+	from{
+		opacity: 0;
+		transform: translateY(-30px);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+
+.timeline .left-container{
+	left: -28%;
+}
+.timeline .left-container-arrow{
+	height: 0;
+	width: 0;
+	position: absolute;
+	top: 28px;
+	z-index: 1;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-left: 15px solid #EAEAEA;
+	right: -15px;
+}
+
+.timeline .right-container{
+	left: 28%;
+
+}
+.timeline .right-container-arrow{
+	height: 0;
+	width: 0;
+	position: absolute;
+	top: 28px;
+	z-index: 1;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-right: 15px solid #EAEAEA;
+	left: -15px;
+}
+
+.timeline .text-box{
+	padding: 20px 30px;
+	background-color: #EAEAEA;
+	position: relative;
+	border-radius: 6px;
+	font-size: 11;
+}
+
+.timeline  .text-box img{
+	height: 40px;
+}
+.timeline .text-box h3{
+	font-weight: 600;
+}
+.timeline .text-box small{
+	display: inline-block;
+	margin-bottom: 15px;
+}
+
+.timeline::after{
+	content: "";
+	position: absolute;
+	width: 6px;
+	height: 100%;
+	background: #000000;
+	top:0;
+	left: 50%;
+	margin-left: -3px;
+	z-index: -1;
+	opacity: 0;
+	
+}
+
+.timeline .container {
+	animation: movedown 1s linear forwards;
+	animation-fill-mode: forwards;
+}
+
+.timeline::after {
+	animation: moveline 2s linear forwards; /*1s par container*/
+	animation-fill-mode: forwards;
+}
+.timeline .container:nth-child(1){
+	animation-delay: 0s;
+}
+.timeline .container:nth-child(2),{
+	animation-delay: 1s;
+}
+
+
+@keyframes moveline{
+	0%{
+		height: 0%;
+		opacity: 1;
+	}
+	100%{
+		height: 100%;
+		opacity: 1;
+	}
+}
+
+
+@media screen and (max-width: 600px){
+	.timeline{
+		margin: 50px auto;
+	}
+	.timeline::after{
+		left: 31px;
+	}
+	.container{
+		width: 100%;
+		padding-left: 80px;
+		padding-right: 25px;
+	}
+	.text-box{
+		font-size: 13px;
+	}
+	.text-box small{
+		margin-bottom: 10px;
+	}
+	.right-container{
+		left: 0;
+	}
+	.left-container-arrow{
+		border-right: 15px solid #EAEAEA;
+		border-left: 0;
+		left: -15px;
+	}
+}
+.timeline a{
+	color: #13293D;
+	text-decoration: underline #13293d34;
+}
+/*--------------  Fin de la page parcours -------------- */
 
 /*--------------  Fin de la page contact -------------- */
 
