@@ -33,7 +33,7 @@ html { overflow-x: hidden; }
   /*Fin modifier la scrollbar */
 /* -------Début barre de navigation------- */
 header{
-	width: 100%;
+	width: 100vw;
 	background-color: #E8F1F2;
 	padding: 1% 1%;
 	font-size: 20px;
@@ -149,7 +149,7 @@ main {
 	display: flex;
     flex-direction: column;
     height: 800vh; /* Chaque page prendra 100% de la hauteur de l'écran. Changer pour avoir 100*nb pages*/
-	width: 100%;
+	width: 100vw;
 }
 a{
 	text-align: justify;
@@ -167,6 +167,7 @@ a{
 #comp{
 	flex: 2;
 }
+
 
 .barre_sep {
     width: 50%;
@@ -279,10 +280,11 @@ a{
 /*--------------  Fin de la page prez -------------- */
 
 /*--------------  Début de la page comp -------------- */
-
-#conteneur_comp{
-	margin: 2% 8% 0 8%;
+.container_comp{
+	width: 90%;
+	margin-left: 2.5%;
 }
+
 .card-img-top{
 	height: 200px;
 }
@@ -292,13 +294,59 @@ a{
 .card-text{
 	height: 30px;
 }
+
+.card{
+	margin-top: 5px;
+	transition: box-shadow 0.3s ease;
+	width: 300px;
+	margin-left: 2.5%;
+}
+.card:hover{
+
+	box-shadow: 0px 0px 10px #1f759aa1;
+	
+}
+/* animation chargement prochaine compétence */
+.square-circle-5 {
+	width:65px;
+	aspect-ratio:1;
+	position:absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+  }
+  .square-circle-5:before,
+  .square-circle-5:after {
+	content:"";
+	position:absolute;
+	border-radius:50px;
+	box-shadow:0 0 0 3px inset #1f759a;
+	animation:sc5 2.5s infinite;
+  }
+  .square-circle-5:after {
+	animation-delay:-1.25s;
+	border-radius:0;
+  }
+  @keyframes sc5{
+	0%    {inset:0    35px 35px 0   }
+	12.5% {inset:0    35px 0    0   }
+	25%   {inset:35px 35px 0    0   }
+	37.5% {inset:35px 0    0    0   }
+	50%   {inset:35px 0    0    35px}
+	62.5% {inset:0    0    0    35px}
+	75%   {inset:0    0    35px 35px}
+	87.5% {inset:0    0    35px 0   }
+	100%  {inset:0    35px 35px 0   }
+  }
+/* fin animation chargement prochaine compétence */
 /*--------------  Fin de la page comp -------------- */
 
 /*--------------  Début de la page parcours -------------- */
+
 .timeline{
-	margin-top: 100px;
-}
-.timeline{
+	margin-top: 70px;
+	margin-left: 5%;
 	position: relative;
 	width: 90%;
 
@@ -357,6 +405,7 @@ a{
 }
 
 .timeline .text-box{
+	text-align: center;
 	padding: 20px 30px;
 	background-color: #EAEAEA;
 	position: relative;
@@ -390,21 +439,28 @@ a{
 }
 
 .timeline .container {
-	animation: movedown 1s linear forwards;
-	animation-fill-mode: forwards;
+    animation: movedown 1s linear forwards;
+    animation-fill-mode: forwards;
 }
 
 .timeline::after {
-	animation: moveline 2s linear forwards; /*1s par container*/
-	animation-fill-mode: forwards;
+    animation: moveline 3s linear forwards; /* 1s per container */
+    animation-fill-mode: forwards;
 }
-.timeline .container:nth-child(1){
-	animation-delay: 0s;
-}
-.timeline .container:nth-child(2),{
-	animation-delay: 1s;
+/* delai de l'animation Timeline */
+.timeline .container:nth-child(1) {
+    animation-delay: 0s;
 }
 
+.timeline .container:nth-child(2) {
+    animation-delay: 1s; 
+}
+.timeline .container:nth-child(3) {
+    animation-delay: 2s; 
+}
+.timeline .container:nth-child(4) {
+    animation-delay: 3s; 
+}
 
 @keyframes moveline{
 	0%{
@@ -420,7 +476,7 @@ a{
 
 @media screen and (max-width: 600px){
 	.timeline{
-		margin: 50px auto;
+		margin: 40px auto;
 	}
 	.timeline::after{
 		left: 31px;
