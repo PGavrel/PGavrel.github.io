@@ -148,7 +148,7 @@ nav .nav-item:hover {
 main {
 	display: flex;
     flex-direction: column;
-    height: 700vh; /* Chaque page prendra 100% de la hauteur de l'écran. Changer pour avoir 100*nb pages*/
+    height: 800vh; /* Chaque page prendra 100% de la hauteur de l'écran. Changer pour avoir 100*nb pages*/
 	width: 100vw;
 }
 a{
