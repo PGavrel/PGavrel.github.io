@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
+<base target="_blank" />
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Pierre Gavrel - Portfolio</title>
@@ -291,7 +293,7 @@
 
                     <div class="container left-container" >
                         <div class="text-box">
-                            <a href="https://fr.wikipedia.org/wiki/Lyc%C3%A9e_Michelet_(Vanves)"><img src="Image/logo_lycée_michelet.png" alt="Logo Lycée Michelet"></a>
+                            <a href="https://fr.wikipedia.org/wiki/Lyc%C3%A9e_Michelet_(Vanves)"><img id="logo_lycée_michelet" src="Image/logo_lycée_michelet.png" alt="Logo Lycée Michelet"></a>
                             <h3>Baccalauréat général - <a href="https://fr.wikipedia.org/wiki/Lyc%C3%A9e_Michelet_(Vanves)">Lycée Jules Michelet,Vanves</a></h3>
                             <small> Septembre 2019 - juillet 2022</small>
                             <p>J'ai obtenu mon baccalauréat avec la mention assez bien. En première, j'ai choisi les spécialités mathématiques, physique-chimie et sciences économiques et sociales. En Terminale, nous devions ne devions garder que 2 de ces spécialités.J'ai choisi d'arrêter la spécialité mathématique tout en prenant l'option mathématique complémentaire.</p>
@@ -314,7 +316,22 @@
 
         <div class="page" id="contact">
             <div class="barre_sep"></div>
-            <h1 class="titre_page">Contacts</h1>
+            <h1 id="titre_contact" class="titre_page">Contacts</h1>
+            <div class="container_contact">
+                
+                <form class="form" action="https://formspree.io/f/xyyroabv" method="POST">
+                    <p type="Nom:"><input type="text" name="nom" placeholder="Entrez votre nom..."></p>
+                    <p type="Email:"><input type="email" name="email" placeholder="Pour vous recontacter..."></p>
+                    <p type="Message:"><input type="text" name="message" placeholder="Quel est votre message?"></p>
+                    <button type="submit">Envoyer le message</button>
+                </form>
+                <div class="text-box-contact">
+                    <p></p>
+                    <div class="badge-base LI-profile-badge" data-locale="fr_FR" data-size="large" data-theme="light" data-type="VERTICAL" data-vanity="pierregavrel" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://fr.linkedin.com/in/pierregavrel?trk=profile-badge"> </a></div>
+              
+              
+                </div>
+            </div>
 
             
 
@@ -331,7 +348,7 @@
 
     <!--JavaScript -->
     <script src="Javascript/Javascript.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <!--Fin JavaScript -->
 </body>
 </html>

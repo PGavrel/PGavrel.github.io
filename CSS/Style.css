@@ -12,8 +12,10 @@ html{
 
  /* modifier la scrollbar */
 html { overflow-x: hidden; }
-::-webkit-scrollbar {
-	width: 15px;
+
+
+::-webkit-scrollbar{
+	width: 10px;
   }
   
   /* Fond de la scrollbar */
@@ -22,10 +24,30 @@ html { overflow-x: hidden; }
   }
    
   /* poignée coulissante */
-  ::-webkit-scrollbar-thumb {
+   ::-webkit-scrollbar-thumb {
 	background: #888; 
   }
+
+  /* poignée coulissante hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555; 
+  }
+
+
+::-webkit-scrollbar:hover{
+	width: 15px;
+  }
   
+  /* Fond de la scrollbar */
+  ::-webkit-scrollbar-track:hover {
+	background: #f1f1f1; 
+  }
+   
+  /* poignée coulissante */
+  ::-webkit-scrollbar-track:hover ::-webkit-scrollbar-thumb {
+	background: #888; 
+  }
+
   /* poignée coulissante hover */
   ::-webkit-scrollbar-thumb:hover {
 	background: #555; 
@@ -148,7 +170,7 @@ nav .nav-item:hover {
 main {
 	display: flex;
     flex-direction: column;
-    height: 800vh; /* Chaque page prendra 100% de la hauteur de l'écran. Changer pour avoir 100*nb pages*/
+    height: 850vh; /* Chaque page prendra 100% de la hauteur de l'écran. Changer pour avoir 100*nb pages*/
 	width: 100vw;
 }
 a{
@@ -159,13 +181,13 @@ a{
 
 /* définition des class */
 .page{
-    flex: 1; /* Chaque pages prend la taille de l'écran */
+    flex: 1.2; /* Chaque pages prend la taille de l'écran */
 	display: flex;
     flex-direction: column;
     align-items: center; 
 }
 #comp{
-	flex: 2;
+	flex: 2 !important;
 }
 
 
@@ -346,9 +368,9 @@ a{
 
 .timeline{
 	margin-top: 70px;
-	margin-left: 5%;
+	margin-left: -0.5%;
 	position: relative;
-	width: 90%;
+	width: 88vw;
 
 }
 .timeline .container {
@@ -415,6 +437,9 @@ a{
 
 .timeline  .text-box img{
 	height: 40px;
+}
+#logo_lycée_michelet{
+	height: 25px;
 }
 .timeline .text-box h3{
 	font-weight: 600;
@@ -506,6 +531,21 @@ a{
 	text-decoration: underline #13293d34;
 }
 /*--------------  Fin de la page parcours -------------- */
+
+/*--------------  Début de la page contact -------------- */
+
+.container_contact{width:680px;height:60vh;background:#e6e6e6;border-radius:8px;margin-top:60px;padding:20px 30px;max-width:calc(100vw - 40px);box-shadow:0 0 20px -10px #000;box-sizing:border-box;font-family:'Montserrat',sans-serif;position:relative;display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */}
+.form:hover{box-shadow:0 0 20px -10px #000;}
+.form{border: solid lightgray;padding:0 15px 0;border-radius: 6px;width: 45%;flex: 1;}
+.form input{width:100%;padding:10px;box-sizing:border-box;background:none;outline:none;resize:none;border:0;font-family:'Montserrat',sans-serif;transition:all .3s;border-bottom:2px solid #bebed2}
+.form input:focus{border-bottom:2px solid #78788c}
+.form p:before{content:attr(type);display:block;margin:28px 0 0;font-size:14px;color:#5a5a5a}
+.form button{float:right;padding:8px 12px;margin:8px 0 0;font-family:'Montserrat',sans-serif;border:2px solid #78788c;background:#d7d7d7;color:#5a5a6e;cursor:pointer;transition:all .3s}
+.form button:hover{background:#78788c;color:#fff}
+
+.text-box-contact{padding:0 15px 0;border-radius: 6px;width: 45%;margin-left:15px;flex: 1;}
+.text-box-contact p{display:block;margin:28px 0 0;font-size:14px;color:#5a5a5a}
 
 /*--------------  Fin de la page contact -------------- */
 
